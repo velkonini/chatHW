@@ -52,6 +52,9 @@ public class ClientHandler {
                     //цикл работы
                     while (true) {
                         String str = in.readUTF();
+                        if(str.startsWith("/")){
+                            System.out.println(nick + ":" + str);
+                        }
 
                         if (str.equals("/end")) {
                             out.writeUTF("/end");
